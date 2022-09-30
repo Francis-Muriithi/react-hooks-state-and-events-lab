@@ -3,11 +3,11 @@ import ShoppingList from "./ShoppingList";
 import itemData from "../data/items";
 
 function App() {
-  const [theme, setTheme]= useState()
+  const [theme, setTheme]= useState(false)
 
-  const darkThemeHandler =()=>{
-    theme === "App light" ? setTheme("App dark") : setTheme("App light");
-  }
+function handleClick(){
+  setTheme(theme => !theme);
+}
   
 
   // replace 'false' with a state variable that can be toggled between true and false
@@ -18,7 +18,7 @@ function App() {
     <div className={appClass}>
       <header>
         <h2>Shopster</h2>
-        <button onClick={(e)=> darkThemeHandler()}>Dark Mode</button>
+        <button onClick={handleClick}>Dark Mode</button>
       </header>
       <ShoppingList items={itemData} />
     </div>
