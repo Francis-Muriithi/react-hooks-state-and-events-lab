@@ -10,7 +10,7 @@ function Item({ name, category }) {
   const cartStatus = cart ? "Remove From Cart" : "Add to Cart"
 
   return (
-    <li className="">
+    <li className= " ">
       <span>{name}</span>
       <span className="category">{category}</span>
       <button className="add" onClick={handleCart}>{cartStatus}</button>
